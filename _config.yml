@@ -1,0 +1,6 @@
+name: sachinsudheendra
+markdown: redcarpet
+pygments: false
+navigation:
+- text: Blog
+  url: index.html
