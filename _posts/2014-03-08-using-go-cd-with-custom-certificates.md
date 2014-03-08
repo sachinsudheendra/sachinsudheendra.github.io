@@ -17,7 +17,7 @@ If you have the key and certificate, you should export them to the pkcs12 format
 $ openssl pkcs12 -inkey goserver.key -in goserver.crt -export -out goserver.pkcs12
 ```
 
-## Step 2: Importing the pkcs12 into the Java Keystore
+## Step 2: Importing the PKCS12 store into the Java Keystore
 
 Once you have the goserver.pkcs12 file, you would need to import this keystore into the java keystore that Go uses. We will use the **keytool** utility that ships with Java.
 
