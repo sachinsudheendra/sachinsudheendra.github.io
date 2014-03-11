@@ -38,7 +38,7 @@ Verifying - Enter Export Password:
 
 ## Step 3: Importing the PKCS12 store into the Java Keystore
 
-Once you have the goserver.pkcs12 file, you would need to import this keystore into the java keystore that Go uses. We will use the **keytool** utility that ships with Java.
+Once you have the site.pkcs12 file, you would need to import this keystore into the java keystore that Go uses. We will use the **keytool** utility that ships with Java.
 
 > Note: Destination keystore password **must** be set to **serverKeystorepa55w0rd**
 
