@@ -18,7 +18,7 @@ The passphrase of the certificate key, for example **site.key**, should be chang
 ```
 $ mv site.key site.key.orig
 $ openssl rsa -des3 -in site.key.orig -out site.key
-Enter pass phrase for site.key.original:
+Enter pass phrase for site.key.orig:
 writing RSA key
 Enter PEM pass phrase:
 Verifying - Enter PEM pass phrase:
