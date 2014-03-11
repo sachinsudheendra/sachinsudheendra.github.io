@@ -7,7 +7,7 @@ layout: default
 
 The following post will help you setting up [Go](http://www.go.cd) to use your custom certificate instead of the self-signed certificate that Go ships with.
 
-> Assumption: You have the certificate key (*.key) and certificate (*.crt)
+> Assumption: You have the certificate key (*.key) and an X509 certificate (*.crt)
 
 ## Step 1: Converting your certificate (*.crt) into PKCS12 format
 
@@ -24,7 +24,7 @@ Once you have the goserver.pkcs12 file, you would need to import this keystore i
 > Note: Destination keystore password **must** be set to **serverKeystorepa55w0rd**
 
 ```
-$ keytool -importkeystore -srckeystore goserver.pkcs12 -srcstoretype PKCS12 -destkeystore keystore
+$ keytool -importkeystore -srckeystore goserver.pkcs12 -srcstoretype PKCS12 -destkeystore keystore -srcalias 1 -destalias cruise
 Enter destination keystore password: serverKeystorepa55w0rd
 Re-enter new password: serverKeystorepa55w0rd
 Enter source keystore password:
@@ -71,6 +71,8 @@ cp /tmp/keystore /etc/go
 ```
 sudo /etc/init.d/go-server start
 ```
+
+Post this, when you access the Go Server over HTTPS (https://<go-server>:8154), the certificate served should be the one you added into the keystore.
 
 
 ## References
