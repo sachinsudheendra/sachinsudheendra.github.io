@@ -33,7 +33,7 @@ openssl req -x509 -in server.req -text -key server.key -out server.crt
 chmod og-rwx server.key
 ```
 
-Copy the server key and certificate to $PGDATA directory
+Copy the server key and certificate to [$PGDATA](http://www.postgresql.org/docs/9.2/static/storage-file-layout.html) directory
 
 ```
 cp server.key $PGDATA
